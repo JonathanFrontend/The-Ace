@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: aqua;
+}
+:root{
+    --mini-heart-height: 30px;
+    --mini-heart-width: var(--mini-heart-height);
+
+    --heart-size: 50px;
+}
+main {
+    position: relative;
+    background: cornsilk;
+    border: 1px solid black;
+    border-radius: 25px;
+    height: 600px;
+    width: 350px;
+    margin: 4% auto;
+    padding: 20px;
+}
+h1 {
+    color: red;
+    font-size: 50px;
+}
+.corner-1 {
+    height: 20%;
+    position: relative;
+}
+    .corner-1 h1 {
+        top: 0;
+        left: 0;
+    }
+.mini-heart-1 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: red;
+    height: var(--mini-heart-height);
+    width: var(--mini-heart-width);
+    transform: rotate(45deg);
+}
+.mini-heart-1::before {
+    content: "";
+    position: absolute;
+    background: red;
+    height: var(--mini-heart-height);
+    width: var(--mini-heart-width);
+    border-radius: 50%;
+    top: -50%;
+    right: 0;
+}
+.mini-heart-1::after {
+    content: "";
+    position: absolute;
+    background: red;
+    height: var(--mini-heart-height);
+    width: var(--mini-heart-width);
+    border-radius: 50%;
+    top: 0px;
+    left: -50%;
+}
+
+.middle {
+    height: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.container {
+    margin: auto auto;
+    height: 25%;
+    width: 25%;
+}
+.heart {
+    margin: auto auto;
+    background: red;
+    height: var(--heart-size);
+    width: var(--heart-size);
+    transform: rotate(45deg);
+}
+.heart::before {
+    content: "";
+    position: absolute;
+    background: red;
+    height: var(--heart-size);
+    width: var(--heart-size);
+    border-radius: 50%;
+    top: -50%;
+    right: 0;
+}
+.heart::after {
+    content: "";
+    position: absolute;
+    background: red;
+    height: var(--heart-size);
+    width: var(--heart-size);
+    border-radius: 50%;
+    top: 0px;
+    left: -50%;
+}
+
+.corner-2{
+    position: relative;
+    bottom: 0;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+.upside-down {
+    transform: rotate(180deg);
+    height: 100%;
+    width: 20%;
+    right: 0;
+}
